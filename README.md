@@ -1,7 +1,7 @@
 # Scala Servers for Lambda
 
 [![Build Status](https://travis-ci.org/kellydavid/scala-server-lambda.svg?branch=master)](https://travis-ci.org/kellydavid/scala-server-lambda)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.dvdkly/scala-server-lambda-common/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.dvdkly/scala-server-lambda-common)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.dvdkly/scala-server-lambda-common_2.13/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.dvdkly/scala-server-lambda-common_2.13)
 
 Scala Servers for Lambda allows you to run existing Scala servers over API Gateway and AWS Lambda.
 
