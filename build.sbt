@@ -19,13 +19,13 @@ lazy val root = project
   .aggregate(common, tests, http4s, http4sZio, akka, exampleHttp4s, exampleAkka)
 
 inThisBuild(List(
-  organization := "io.github.howardjohn",
-  homepage := Some(url("https://github.com/howardjohn/scala-server-lambda")),
+  organization := "com.dvdkly",
+  homepage := Some(url("https://github.com/kellydavid/scala-server-lambda")),
   licenses := Seq("MIT" -> url("http://opensource.org/licenses/MIT")),
   scmInfo := Some(
     ScmInfo(
-      url("https://github.com/howardjohn/scala-server-lambda"),
-      "scm:git@github.com:howardjohn/scala-server-lambda.git"
+      url("https://github.com/kellydavid/scala-server-lambda"),
+      "scm:git@github.com:kellydavid/scala-server-lambda.git"
     )),
   developers := List(
     Developer(
@@ -33,6 +33,12 @@ inThisBuild(List(
       name = "John Howard",
       email = "johnbhoward96@gmail.com",
       url = url("https://github.com/howardjohn/")
+    ),
+    Developer(
+      id = "kellydavid",
+      name = "David Kelly",
+      email = "kellydavid178@gmail.com",
+      url = url("https://dvdkly.com")
     )
   )
 ))
