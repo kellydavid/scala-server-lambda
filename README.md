@@ -11,10 +11,22 @@ Benefits:
 * No need to deal with Lambda's API directly, which aren't easy to use from Scala.
 * All code is deployed to single Lambda function, meaning our functions will be kept warm more often.
 
-## Supported Servers
+## How to import the library
 
-* [http4s](http://http4s.org) - version 0.20
-* [akka-http](https://doc.akka.io/docs/akka-http/current) - version 10.1.1
+Choose one of the following dependencies and add it to your SBT file.
+
+Please make sure to use the latest available version which should be visible in the badge at the top of the repo.
+
+```scala
+// For use with http4s and cats effect
+libraryDependencies += "com.dvdkly" %% "scala-server-lambda-http4s" % "<version>"
+
+// For use with http4s and ZIO
+libraryDependencies += "com.dvdkly" %% "scala-server-lambda-http4s-zio" % "<version>"
+
+// For use with akka-http
+libraryDependencies += "com.dvdkly" %% "scala-server-lambda-akka-http" % "<version>"
+```
 
 ## Dependencies
 
@@ -34,7 +46,7 @@ More thorough examples can be found in the examples directory.
 First, add the dependency:
 
 ```scala
-libraryDependencies += "io.github.howardjohn" %% "http4s-lambda" % "0.3.1"
+libraryDependencies += "com.dvdkly" %% "scala-server-lambda-http4s" % "0.5.1"
 ```
 
 Next, we define a simple `HttpService`. Then, we simply need to define a new class for Lambda.
@@ -59,7 +71,7 @@ Thats it! Make sure any dependencies are initialized in the Route object so they
 First, add the dependency:
 
 ```scala
-libraryDependencies += "io.github.howardjohn" %% "akka-http-lambda" % "0.3.1"
+libraryDependencies += "com.dvdkly" %% "scala-server-lambda-akka-http" % "0.5.1"
 ```
 
 Next, we define a simple `Route`. Then, we simply need to define a new class for Lambda.
@@ -96,9 +108,4 @@ When deploying to Lambda, the handler should be specified as `<PACKAGE_NAME>.Rou
 
 Finally, an API can be created in API Gateway. [Lambda Proxy integration](https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-lambda-proxy-integrations.html) must be enabled.
 
-## Versions
 
-| Version      | http4s Version | akka-http Version |
-|--------------|----------------|-------------------|
-| 0.4          | 0.20           | 10.1              |
-| 0.3.1        | 0.18           | 10.1              |
