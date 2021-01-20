@@ -45,7 +45,7 @@ inThisBuild(List(
 
 lazy val CirceVersion = "0.12.1"
 lazy val ScalaTestVersion = "3.1.0"
-lazy val Http4sVersion = "0.21.0-M5"
+lazy val Http4sVersion = "0.21.15"
 
 lazy val common = project
   .in(file("common"))
@@ -105,8 +105,8 @@ lazy val http4sZio = project
         "org.scalatest" %% "scalatest" % ScalaTestVersion % "test",
         "org.http4s" %% "http4s-dsl" % Http4sVersion % "test",
         "org.http4s" %% "http4s-circe" % Http4sVersion % "test",
-        "dev.zio" %% "zio" % "1.0.0-RC14",
-        "dev.zio" %% "zio-interop-cats" % "2.0.0.0-RC5"
+        "dev.zio" %% "zio" % "1.0.1",
+        "dev.zio" %% "zio-interop-cats" % "2.1.4.0"
       )
     }
   )
