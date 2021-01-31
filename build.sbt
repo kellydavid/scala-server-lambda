@@ -1,5 +1,5 @@
-lazy val Scala212Version = "2.12.10"
-lazy val Scala213Version = "2.13.1"
+lazy val Scala212Version = "2.12.13"
+lazy val Scala213Version = "2.13.4"
 
 def scalacVersionOptions(scalaVersion: String) =
   CrossVersion.partialVersion(scalaVersion) match {
